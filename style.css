@@ -10,7 +10,7 @@ h1{
 div#hero{
     padding: 30px 60px;  
     min-height: 800px;
-    background-image: url('/img/steve-halama-414935.jpg');
+    background-image: url('img/steve-halama-414935.jpg');
     background-size: cover;
     background-position: 50% 80%;
 }
@@ -45,7 +45,7 @@ div#stats .col{
     margin-top: 25px;
 }
 div#stats .imgContainer{
-    background-image: url('/img/petar-petkovski-433748.jpg');
+    background-image: url('img/petar-petkovski-433748.jpg');
     background-size:2000px;
     height: 571px;
     display: block;
@@ -62,7 +62,7 @@ div#fire .col{
     max-width: 350px;
 }
 div#fire .imgContainer{
-    background-image: url('/img/gogama-train-derailment-march-7-2015.jpg');
+    background-image: url('img/gogama-train-derailment-march-7-2015.jpg');
     background-size:cover;
     height:650px;
     display: block;
