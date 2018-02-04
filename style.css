@@ -10,7 +10,7 @@ h1{
 div#hero{
     padding: 30px 60px;  
     min-height: 800px;
-    background-image: url('img/steve-halama-414935.jpg');
+    background: url('img/steve-halama-414935.jpg') #0B0A0A;
     background-size: cover;
     background-position: 50% 80%;
 }
