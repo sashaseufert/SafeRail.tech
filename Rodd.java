@@ -14,6 +14,43 @@ public class Rodd {
 	// This is a placeholder class
 	RODD_CONTROLLER rodd;
 	
+	
+		public static void main(String[] args) {
+		// REPLACE WITH WHOLE PATH
+		String command = "detect_uv.py";
+
+		try
+		{
+		Process p = Runtime.getRuntime().exec(command);
+		BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		String s = "";
+		
+        BufferedReader stdInput = new BufferedReader(new 
+                InputStreamReader(p.getInputStream()));
+
+           BufferedReader stdError = new BufferedReader(new 
+                InputStreamReader(p.getErrorStream()));
+
+           // read the output from the command
+           System.out.println("Here is the standard output of the command:\n");
+           while ((s = stdInput.readLine()) != null) {
+               System.out.println(s);
+           }
+           
+           // read any errors from the attempted command
+           System.out.println("Here is the standard error of the command (if any):\n");
+           while ((s = stdError.readLine()) != null) {
+               System.out.println(s);
+           }
+           
+		}
+		catch(IOException ex) 
+		{
+			System.out.println("IO problem");
+			System.out.println(ex);
+		}
+	}
+	
 	// This function can be renamed, this is only a placeholder
 	public void Process_Rodd(int DIST_FROM_TRAIN)
 	{
