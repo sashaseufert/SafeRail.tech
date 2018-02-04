@@ -19,6 +19,13 @@ div#hero h1{
     font-size: 72px;
     color: white;
 }
+div#hero p{
+    color: #A9C0C9;
+    text-align: center;
+    font-size: 48px;
+    max-width: 22em;
+    margin: 500px auto 0;   
+}
 div#stats{
     padding: 30px 60px;  
     background: #0B0A0A;
@@ -46,7 +53,7 @@ div#stats .col{
 }
 div#stats .imgContainer{
     background-image: url('img/petar-petkovski-433748.jpg');
-    background-size:2000px;
+    background-size:cover;
     height: 571px;
     display: block;
     flex-grow: 1;

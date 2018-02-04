@@ -18,6 +18,16 @@ $(document).ready(function () {
                 console.log(vid.duration, window.pageYOffset - $("div#parallax-container").offset().top);
                 
             }
+            var nums = $("span.countingNumber");
+            $.each(nums, function (i) {
+                var e = $(nums[i]);
+                if ($(e).attr("data-count")) {
+                    var progress = Math.max(0.2, Math.min(1.5 * (window.pageYOffset - $(e).offset().top + window.innerHeight) / window.innerHeight, 1));
+                    var total = parseFloat(e.attr("data-count"));
+                    console.log(total, progress);
+                    $(e).text(Math.floor(total * progress));
+                }    
+            })
         })    
     });
 });
