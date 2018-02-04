@@ -37,7 +37,7 @@ $(document).ready(function () {
             // $angle = $(document.body).height() - (window.pageYOffset + window.innerHeight);
             $angle = $(document.body).height() - (window.pageYOffset + window.innerHeight);
             console.log($(document.body).height() - (window.pageYOffset + window.innerHeight));
-            $("#meh").css({"transform" : "rotate(" + $angle*3 +"deg)", "left" : $angle*3   + "px"});
+            $("#meh").css({"transform" : "rotate(" + $angle*3 +"deg)", "left" : $angle*3 + "px", "bottom": Math.sin($angle/10)*50+Math.abs(Math.tan($angle/50)*100) + "px"});
         })    
     });
 });
