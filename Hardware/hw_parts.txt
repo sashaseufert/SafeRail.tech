@@ -1,0 +1,114 @@
+Motor: 
+	
+	URL: http://www.cnqsmotor.com/en/article_read/QS%20Motor%20500W-3000W%20205%2014kW%20Peak%20Brushless%20DC%20Electric%20Bike%20Bicycle%20Spoke%20Hub%20Motor%20For%20Bike/536.html
+
+    Motor Type: BLDC Permanent Magnet Outer Rotor In-Wheel Hub Motor With Hall Sensor
+    Price: 276USD
+    Brand: QS Motor,QSMOTOR
+    Motor Design: Double axle without rim (not integrated), 36 spoke holes, OD 4.2mm 
+    Matching Rim size: 24inch, 26inch E-Bike Wheel, 17inch, 18inch, 19inch moped wheel.
+    Magnet Height: 50mm, 16 pole pairs
+    Stator: Aluminmum Core
+    Rated Power: 3000W (could be 14000W peak in few seconds) 
+    Rated Voltage: 72V as default (48V-96V, optional)
+    Speed: 80KPH as default (24-120KPH, optional) 
+    kV: 6.3/7.3/8.1/8.3/9.0(as default)/10.6/11.4/13.3/14.3/16.3/17.7 etc.
+    Max Torque: approx 182N.m
+    Max Efficiency: 86-91%
+    Continuous Battery Current: 52A (72V)
+    Peak Battery Current: 104A (72V)
+    Suggest Peak Phase Current: 196-245A (depend on the kV)
+    Thermic Probe: KTY83/122 (as default, optional)
+    Working Temperature: 70-120℃ , peak 150 ℃ 
+    Brake type: Bike Disc brake, PCD6*44mm(as default)
+    Drop-outs/Rear Fork Width for installation: 150-154mm
+    14mm english thread length for single/3 speed freewheel
+    10mm axle flats
+    Dual Hall Set with waterproof connectors
+    10mm² Cross Section of Phase Wire (not include insulation layer)
+    Hall Sensor Phasing angle: 120 degree
+    Waterproof Grade: IP54
+    Color: Black (as default), White/Luminous (extra $5.0)
+    N.W./G.W.: 12.5kg/14.0kg   Package Dimension: 34cm*34cm*33cm/piece
+
+
+Battery pack:
+
+	URL: http://www.electricmotorsport.com/gbs-96v-100ah-li-ion-battery-pack-with-emus-bms-and-charger.html
+
+	Total price of pack: 5663.05USD
+
+	Battery:
+	- Nominal Voltage: 12.8V (4X 3.2 V)
+	- Nominal Capacity: 100 Ah
+	- LiFeMnPO4 chemistry
+	- Operation Voltage Range: 11.2 to 14.4V
+	- Weight: 14.5 kg or 31.96 lbs
+	- Dimension: 140X28072243 mm or 5.51X10.7X9.56 in
+	- Max Charging Current: 3C
+	- Max Discharge Current: 3C (continuous) / 10C (pulsed)
+	- Cycle Life : >1500 (80%DOD)
+	- Operating Temperature: -20 to 65 C or -4 to 149 F
+	- Self Discharge Rate: <3% monthly
+	- Accessories included: jumpers, bolts or rivets, washers, split washers and cell covers
+
+	BMS (Battery Management System):
+	BMS Type: Distributed with central control unit
+	Cells count: 2÷255
+	Cell type: Any in 2÷5 V range (LiIon, LiPO, LiFePO4, ...) prismatic cells, other custom shapes cell modules available upon request
+	Battery pack voltage: From 4 to 1300 V
+	Balancing type: Dissipative
+	Control Unit supply voltage range: 7 – 20 V
+	Control Unit consumption: 40 mA average
+	Control Unit outputs maximum drive: urrent 	0,5 A
+	Control Unit RS232 speed: 57600 bits/s 8N1
+	Control Unit CAN speed: up to 1 Mbps
+	Control Unit USB speed: standard Full Speed
+	Control Unit dimensions: 95 x 50 x 30 mm
+	Cell Module voltage range: 2÷5 V
+	Cell Module consumption: 0,5 mA average, 8 mA peaks
+	Cell module shunt resistor: 2,7 Ohm 5W
+	Cell Module maximum balancing current: 1.5 A
+	Cell Module voltage measurement accuracy: +/- 0,01V
+	Cell Module temperature measurement accuracy: +/- 5ºC
+	Cell Module communication speed: ~2,3 ms per cell, allows to receive 45 cells parameters information in approx. 0,1 second
+	Cell Module dimensions: 50 x 30 x 17 mm
+
+GPS:
+
+	URL: https://www.adafruit.com/product/746
+
+	Product: Adafruit Ultimate GPS Breakout - 66 channel w/10 Hz updates - Version 3
+	Price: 39.95USD
+	Satellites: 22 tracking, 66 searching
+    Patch Antenna Size: 15mm x 15mm x 4mm
+    Update rate: 1 to 10 Hz
+    Position Accuracy: < 3 meters (all GPS technology has about 3m accuracy)
+    Velocity Accuracy: 0.1 meters/s
+    Warm/cold start: 34 seconds
+    Acquisition sensitivity: -145 dBm
+    Tracking sensitivity: -165 dBm
+    Maximum Velocity: 515m/s
+    Vin range: 3.0-5.5VDC
+    MTK3339 Operating current: 25mA tracking, 20 mA current draw during navigation
+    Output: NMEA 0183, 9600 baud default, 3V logic level out, 5V-safe input
+    DGPS/WAAS/EGNOS supported
+    FCC E911 compliance and AGPS support (Offline mode : EPO valid up to 14 days )
+    Up to 210 PRN channels
+    Jammer detection and reduction
+    Multi-path detection and compensation
+    Weight (not including coin cell or holder): 8.5g
+    Dimensions (not including coin cell or holder): 25.5mm x 35mm x 6.5mm / 1.0" x 1.35" x 0.25"
+
+Camera:
+
+	URL: https://www.canakit.com/raspberry-pi-camera-v2-8mp.html?cid=cad&src=raspberrypi
+
+	- Product: Raspberry Pi Camera - 8 Megapixel (V2)
+	- Price: 39.95CAD
+	- Fixed focus lens on-board
+	- 8 megapixel native resolution sensor-capable of 3280 x 2464 pixel static images
+	- Supports 1080p30, 720p60 and 640x480p90 video
+	- Size 25mm x 23mm x 9mm
+	- Weight just over 3g
+	- Connects to the Raspberry Pi board via a short ribbon cable (supplied)
