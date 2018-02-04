@@ -101,12 +101,21 @@ div#orangesidebar{
     right: 0;
     width: 398px;
     background-color: #FB9886;
-    height: 1700px;
+    height: 7800px;
     margin-top: -50px;
 }
 div#parallax-text{
     color: white;
 }
 div#parallax-text h1, div#parallax-text p, div#parallax-text ul li{
-    padding: 50px;
+    padding: 280px 50px;
+    font-size: 36px;
+    list-style: none;
+}
+
+div#thehack{
+    background-color: #191970;
+    padding: 100px;
+    color: white;
+    text-align: center;
 }
