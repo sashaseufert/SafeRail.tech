@@ -69,4 +69,3 @@ if remove_files:
     for filename in glob.glob("*.jpg"):
         os.remove(filename)
 
-
