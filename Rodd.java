@@ -1,4 +1,11 @@
 import java.time.*;
+import java.nio.file.Paths;
+import java.nio.file.*;
+
+
+import org.python.google.common.io.Files;
+import org.python.util.PythonInterpreter;
+
 import java.io.*;
 import org.*;
 // This class can be renamed if needed
@@ -10,49 +17,23 @@ public class Rodd {
 	public static int speed = 100; // placeholder
 	public static int maxSpeed = 100;
 	public static boolean ON = true;
-	public static int stableSpeed = 50;
+	public static int stableSpeed = 25; // 25 m/s ~ 80 km/h
+	public static int iteration = 0;
 	// This is a placeholder class
-	RODD_CONTROLLER rodd;
+	public static RODD_CONTROLLER rodd;
 	
-	
-		public static void main(String[] args) {
-		// REPLACE WITH WHOLE PATH
-		String command = "detect_uv.py";
-
-		try
-		{
-		Process p = Runtime.getRuntime().exec(command);
-		BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
-		String s = "";
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
-        BufferedReader stdInput = new BufferedReader(new 
-                InputStreamReader(p.getInputStream()));
+		rodd = new RODD_CONTROLLER();
+		
+		Process_Rodd(3000);
+		
 
-           BufferedReader stdError = new BufferedReader(new 
-                InputStreamReader(p.getErrorStream()));
-
-           // read the output from the command
-           System.out.println("Here is the standard output of the command:\n");
-           while ((s = stdInput.readLine()) != null) {
-               System.out.println(s);
-           }
-           
-           // read any errors from the attempted command
-           System.out.println("Here is the standard error of the command (if any):\n");
-           while ((s = stdError.readLine()) != null) {
-               System.out.println(s);
-           }
-           
-		}
-		catch(IOException ex) 
-		{
-			System.out.println("IO problem");
-			System.out.println(ex);
-		}
 	}
 	
 	// This function can be renamed, this is only a placeholder
-	public void Process_Rodd(int DIST_FROM_TRAIN)
+	public static void Process_Rodd(int DIST_FROM_TRAIN)
 	{
 		// TODO: replace with actual name
 		rodd = new RODD_CONTROLLER();
@@ -65,7 +46,7 @@ public class Rodd {
 			if(System.nanoTime() > lastTime + timeThresh)
 			{
 				lastTime = System.nanoTime();
-				
+				iteration += 1;
 				if(rodd.object_between_tracks())
 				{
 					Alert("WARNING: There may be an object between the tracks");
@@ -121,7 +102,7 @@ public class Rodd {
 	
 	
 	// Sends an alert
-	public void Alert(String message)
+	public static void Alert(String message)
 	{
 		boolean response = false;
 		// Continuously try to relay the message until it is relayed
@@ -132,25 +113,42 @@ public class Rodd {
 	}
 	
 	// returns True if there's a concerning infrared shape
-	public boolean Infrared_Obstacle()
+	public static boolean Infrared_Obstacle()
 	{
-		//TODO
+		int[][] img  = rodd.read_infrared_cameras ();
+		
+		if(false)
+		{
+			Alert("Warning: Animal detected");
+		}
+		
 		return false;
 	}
 	
 	// returns True if there's a concerning UV shape
-	public boolean UV_Obstacle()
+	public static boolean UV_Obstacle()
 	{
+		int[][] img = rodd.read_rail_cameras();
+		
 		//TODO
+		// call python function
+		
+		if(false)
+		{
+			Alert("Warning: Cracks detected");
+		}
+		
 		return false;
 	}
 	
 	// Checks if device is too close to the train
-	// TODO: check the math
-	public boolean Check_Distance(int dist, int lastDist, int DIST_FROM_TRAIN)
+	public static int dist_thresh = 15;
+	public static boolean Check_Distance(int dist, int lastDist, int DIST_FROM_TRAIN)
 	{
 		if(dist < DIST_FROM_TRAIN)
 		{
+			
+			System.out.println("Dist to train: " + dist);
 			// This is the difference in speed of the train and the locomotive
 			// (d1-d2)/t = dv
 			float trainSpeed = (dist - lastDist)/(timeThresh/1000000000);
@@ -162,16 +160,17 @@ public class Rodd {
 			
 			// To reach the distance thresh in 200ms
 			// v = v + dv + (dD/t)
-			int accel = Math.round((DIST_FROM_TRAIN - dist)/(timeThresh/1000000000)) + stableSpeed;			
+			// We overestimate by dist_thresh
+			int accel = Math.round((dist_thresh + DIST_FROM_TRAIN - dist)/(timeThresh/1000000000)) + stableSpeed;			
 			
 			// Can't go faster than the max speed
 			if(accel > maxSpeed)
 			{
 				accel = maxSpeed;
 			}
-			
+			System.out.println("old speed :" + speed);
 			speed = rodd.move(accel);
-			
+			System.out.println("New speed :" + speed);
 		}
 		// Make sure we're going at the stable speed
 		else
@@ -181,9 +180,9 @@ public class Rodd {
 		
 		// If the speed is much less than the desired speed
 		// There might be an obstacle on the rails
-		if(speed/stableSpeed < 0.1)
+		if( stableSpeed <= 1 || (float)speed/stableSpeed < 0.1)
 		{
-			Alert("WARNING: There might be an obstacle on the rails");
+			Alert("WARNING: Trouble speeding up. There might be an obstacle on the rails");
 			return false;
 		}
 		
