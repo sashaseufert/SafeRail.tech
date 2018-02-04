@@ -42,6 +42,7 @@ div#stats h1 span{
 }
 div#stats p{
     color: white;
+    text-align: justify;
 }
 div#stats .col{
     max-width: 380px;
@@ -64,9 +65,12 @@ div#fire, div#fire2{
     background-color: #FB9886;
     padding: 20px;
     display: flex;
+    
 }
 div#fire .col{
     max-width: 350px;
+    text-align: justify;
+    margin-right: 30px;
 }
 div#fire .imgContainer{
     background-image: url('img/gogama-train-derailment-march-7-2015.JPG');
