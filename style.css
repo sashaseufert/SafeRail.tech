@@ -94,6 +94,13 @@ div#parallax-container{
     background-color: #19576F;
     padding: 50px;
     min-height: 950px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#19576f+0,134254+100 */
+background: #19576f; /* Old browsers */
+background: -moz-linear-gradient(top, #19576f 0%, #134254 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #19576f 0%,#134254 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #19576f 0%,#134254 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19576f', endColorstr='#134254',GradientType=0 ); /* IE6-9 */
+background-attachment: fixed;
 }
 div#parallax-text{
     width: 40%;
@@ -106,6 +113,10 @@ div#parallax-content{
 div#parallax-content video{
     margin-top: 100px;
     width: 90%;
+    border: 5px solid black;
+    box-shadow: 10px 10px 80px #0B0A0A;
+    /* border-radius: 20px; */
+    background: black;
 }
 div#orangesidebar{
     position: absolute;
@@ -125,7 +136,7 @@ div#parallax-text h1, div#parallax-text p, div#parallax-text ul li{
 }
 
 div#thehack{
-    background-color: #19576F;
+    background-color: #134254; /* #19576F;*/
     padding: 100px;
     color: white;
     text-align: center;
