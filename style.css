@@ -1,0 +1,112 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: "Slabo 27px";
+}
+h1{
+    font-family: "Raleway";
+    font-weight: 400;
+}
+div#hero{
+    padding: 30px 60px;  
+    min-height: 800px;
+    background-image: url('/img/steve-halama-414935.jpg');
+    background-size: cover;
+    background-position: 50% 80%;
+}
+div#hero h1{
+    font-family: "Slabo 27px";
+    font-size: 72px;
+    color: white;
+}
+div#stats{
+    padding: 30px 60px;  
+    background: #0B0A0A;
+    display: flex;
+}
+div#stats h1{
+    font-family: "Raleway";
+    color: #FB9886;
+    font-size: 64px;
+}
+div#stats h1 span{
+    
+    font-size: 200px;
+}
+div#stats p{
+    color: white;
+}
+div#stats .col{
+    max-width: 380px;
+    text-align: justify;
+    margin-right: 120px;
+    margin-left: 40px;
+    min-height: 750px;
+    margin-top: 25px;
+}
+div#stats .imgContainer{
+    background-image: url('/img/petar-petkovski-433748.jpg');
+    background-size:2000px;
+    height: 571px;
+    display: block;
+    flex-grow: 1;
+    margin-top: 90px;
+}
+
+div#fire, div#fire2{
+    background-color: #FB9886;
+    padding: 20px;
+    display: flex;
+}
+div#fire .col{
+    max-width: 350px;
+}
+div#fire .imgContainer{
+    background-image: url('/img/gogama-train-derailment-march-7-2015.jpg');
+    background-size:cover;
+    height:650px;
+    display: block;
+    flex-grow: 1;
+    margin: -20px 40px -20px -20px;
+}
+div#fire2 h1{
+    color: #191970;
+    font-size: 36px;
+    text-align: center;
+    max-width: 32em;
+    margin: auto;
+    font-family: "Raleway";
+    font-weight: 700;
+    padding: 40px;
+}
+div#parallax-container{
+    background-color: #191970;
+    padding: 50px;
+    min-height: 950px;
+}
+div#parallax-text{
+    width: 40%;
+}
+div#parallax-content{
+    width: 50%;
+    position: absolute;
+    right:0;
+}
+div#parallax-content video{
+    margin-top: 100px;
+    width: 90%;
+}
+div#orangesidebar{
+    position: absolute;
+    right: 0;
+    width: 398px;
+    background-color: #FB9886;
+    height: 1700px;
+    margin-top: -50px;
+}
+div#parallax-text{
+    color: white;
+}
+div#parallax-text h1, div#parallax-text p, div#parallax-text ul li{
+    padding: 50px;
+}

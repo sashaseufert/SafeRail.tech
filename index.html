@@ -2,7 +2,12 @@
  <!DOCTYPE html>
  <html>
  <head>
- <title>Saferail.tech</title>
+    <title>Saferail.tech</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/js/jquery-3.3.1.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="/js/parallax.js"></script>
+    <script src="main.js"></script>
  </head>
  
  <body>
@@ -11,21 +16,22 @@
      <p>A proactive rail safety device that detects obstacles and track damage just in time to prevent disasters</p>
  </div>
  <div id="stats">
-    <div>
-        <h1><span class="countingNumber">527</span> Derailments</h1>
+    <div class="col">
+        <h1><span class="countingNumber" data-count="527">527</span><br /> Derailments</h1>
         <p>Canada suffered from 527 non-main rail track derailments in 2016 alone. 13% of these derailments involved dangerous goods.</p>
         <p>Canada carries over 300 billion tonne-kilometres per year, which represents 68% of Canadian freight. Canada is among the heighest in the world of rail tonnage carried per capita and percentage of frieght carried by rail.</p>
     </div>
-    <div>
 
+    <div class="imgContainer">
+            &nbsp;
     </div>
  </div>
  <div id="fire">
-     <div id="firepic"></div>
-     <div>
+     <div class="imgContainer">&nbsp;</div>
+     <div class="col">
          <p>February 14, 2015</p>
          <h1>
-             <em><span class="countingNumber">1.7</span> Million</em> litres of 
+             <strong><span class="countingNumber" data-count="1.7">1.7</span> Million</strong> litres of 
              crude oil released
              from cracked track
          </h1>
@@ -38,6 +44,15 @@
     <h1>With 46,522 km of rail in Canada alone, rail operators don’t have the manpower to monitor our existing tracks.</h1>
  </div>
  <div id="parallax-container">
+     
+    <div id="orangesidebar"></div>
+    <div id="parallax-content">
+            <video id="paravid" tabindex="0" autobuffer preload>
+                   <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="/video.ogg"></source>
+                   <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/video.mp4"></source>
+                   <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+            </video>
+        </div>
      <div id="parallax-text">
          <h1>The Saferail.tech unit is a remote IoT device that rides ahead of trains, using its array of onboard sensors to monitor tracks for damage and obstacles. </h1>
          <p>Upon detection of a hazard, the unit will alert the train within a safe  distance for engineers to stop, evaluate the risk, perform applicable repairs, and safely pass over or avoid the problem track</p>
@@ -53,14 +68,7 @@
              <li>Array of track sensors take detailed track analysis at high speed and feed data into ML algorithms to detect track anomalies</li>
          </ul>
      </div>
-     <div id="parallax-content">
-         <video id="p-vid" tabindex="0" autobuffer preload>
-                <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="/video.ogg"></source>
-                <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/video.mp4"></source>
-                <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
-         </video>
-     </div>
-     <div id="orangesidebar"></div>
+     
     
  </div>
 <div>
