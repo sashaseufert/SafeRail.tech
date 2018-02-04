@@ -136,7 +136,7 @@ div#parallax-text h1, div#parallax-text p, div#parallax-text ul li{
 }
 
 div#thehack{
-    background-color: #134254; /* #19576F;*/
+    background-color: rgba(19,66,84,0.95);
     padding: 100px;
     color: white;
     text-align: center;
@@ -169,4 +169,9 @@ body.isMobile div#parallax-text h1, body.isMobile div#parallax-text p, body.isMo
     padding: 20px;
     font-size: 36px;
     list-style: none;
+}
+
+body{
+    background: url('https://registration.mchacks.ca/assets/images/logo.svg') #E28278;
+    background-size: 100px 100px;
 }

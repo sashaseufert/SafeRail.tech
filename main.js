@@ -8,7 +8,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         window.requestAnimationFrame(function () {
             var top = $("body").scrollTop();
-            console.log("scroll", top, top + window.innerHeight);
+            // console.log("scroll", top, top + window.innerHeight);
             
             if(window.pageYOffset < 1600) $("div#stats .imgContainer").css({ "background-position-x": 100 - Math.min(100, window.pageYOffset / 20) + "%" });
 
@@ -18,9 +18,9 @@ $(document).ready(function () {
             if (!isMobile) $(vid).css({ "position": "fixed", "z-index": 10, "top": Math.min(100, 9500 - window.pageYOffset ), "right": Math.min(100, window.pageYOffset*7 - 18000) , "width": "50%"});
             if (window.pageYOffset > 2000) {
                 // console.log()
-                var frame = Math.min(vid.duration, (window.pageYOffset - $("div#parallax-container").offset().top) / 220);
+                var frame = Math.min(vid.duration, 2+(window.pageYOffset - $("div#parallax-container").offset().top) / 250);
                 vid.currentTime = frame;
-                console.log(vid.duration, window.pageYOffset - $("div#parallax-container").offset().top);
+                // console.log(vid.duration, window.pageYOffset - $("div#parallax-container").offset().top);
                 
             }
             var nums = $("span.countingNumber");
@@ -29,11 +29,17 @@ $(document).ready(function () {
                 if ($(e).attr("data-count")) {
                     var progress = Math.max(0.2, Math.min(1.5 * (window.pageYOffset - $(e).offset().top + window.innerHeight) / window.innerHeight, 1));
                     var total = parseFloat(e.attr("data-count"));
-                    console.log(total, progress);
+                    // console.log(total, progress);
                     $(e).text(Math.floor(total * progress));
                 }    
             })
+            
+            // $angle = $(document.body).height() - (window.pageYOffset + window.innerHeight);
+            $angle = $(document.body).height() - (window.pageYOffset + window.innerHeight);
+            console.log($(document.body).height() - (window.pageYOffset + window.innerHeight));
+            $("#meh").css({"transform" : "rotate(" + $angle*3 +"deg)", "left" : $angle*3   + "px"});
         })    
     });
 });
+
 
