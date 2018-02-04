@@ -13,7 +13,8 @@ import cv2
 import math
 import glob, os
 
-viewImage = False
+viewImage = True
+lenThresh = 10
 
 
 def find_max(img):
@@ -59,7 +60,7 @@ def detect_clusters(img, thresh):
         area = cv2.contourArea(c)
         leng = lengh_over_area(c)
         
-        if leng > 0 and area/leng < thresh:
+        if leng > 0 and area/leng < thresh and leng > lenThresh:
             if leng > maxL:
                 maxL = leng
                 maxC = c
@@ -108,7 +109,6 @@ def do_everything():
             is_cracks = True
             if viewImage:
                 show_max_contour(C, image)
-    
     remove_files = False
     if remove_files:
         for filename in glob.glob("*.jpg"):
